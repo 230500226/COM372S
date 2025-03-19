@@ -152,7 +152,7 @@ $$ e = E_c \sin(\omega_c t) + \frac{m E_c}{2} \cos((\omega_c - \omega_i)t) - \fr
 - $m$: Modulation index or modulation factor
 - $\omega_i$: Angular frequency of the modulating signal
 
-This formula represents the AM wave as a combination of the carrier signal, the upper sideband (frequency $f_c + f_i$), and the lower sideband (frequency $f_c - f_i$). The first term $E_c \sin(\omega_c t)$ is the carrier signal, the second term $\frac{m E_c}{2} \cos((\omega_c - \omega_i)t)$ is the upper sideband, and the last term $-\frac{m E_c}{2} \cos((\omega_c + \omega_i)t)$ is the lower sideband.
+This formula represents the AM wave as a combination of the carrier signal, the upper sideband (frequency $f_c + f_i$), and the lower sideband (frequency $f_c - f_i$). The first term $E_c \sin(\omega_c t)$ is the carrier signal, the second term $\frac{m E_c}{2} \cos((\omega_c - \omega_i)t)$ is the upper sideband, and the last term $-\\frac{m E_c}{2} \cos((\omega_c + \omega_i)t)$ is the lower sideband.
 
 ### Formula 5.4: Side Frequency Amplitude
 $$ E_{sf} = \frac{m E_c}{2} $$
@@ -168,28 +168,44 @@ This formula calculates the amplitude of the side frequencies in an amplitude mo
 
 ### Double Sideband Suppressed Carrier (DSB-SC)
 - Equation:
- $$ e_{DSB-SC} = E_m \cos(\omega_i t) \cos(\omega_c t) $$
+- 
+$$ e_{DSB-SC} = E_m \cos(\omega_i t) \cos(\omega_c t) $$
+- Power Equation:
+- 
+$$ P_t = P_c \frac{m^2}{2} $$
 - Performance: Efficient in terms of power, as the carrier is suppressed.
 - Bandwidth Efficiency: Uses twice the bandwidth of the modulating signal.
 - Power Efficiency: Higher than standard AM as no power is wasted on the carrier.
 
 ### Single Sideband Full Carrier (SSB-FC)
 - Equation:
- $$ e_{SSB-FC} = E_c \cos(\omega_c t) + \frac{m E_c}{2} \cos((\omega_c + \omega_i)t) $$
+- 
+$$ e_{SSB-FC} = E_c \cos(\omega_c t) + \frac{m E_c}{2} \cos((\omega_c + \omega_i)t) $$
+- Power Equation:
+- 
+$$ P_t = P_c \left( 1 + \frac{m^2}{4} \right) $$
 - Performance: More efficient than DSB-SC but retains the carrier.
 - Bandwidth Efficiency: Uses half the bandwidth of DSB-SC.
 - Power Efficiency: Better than DSB-SC and standard AM as it eliminates one sideband.
 
 ### Single Sideband Suppressed Carrier (SSB-SC)
 - Equation:
- $$ e_{SSB-SC} = \frac{m E_c}{2} \cos((\omega_c + \omega_i)t) $$
+- 
+$$ e_{SSB-SC} = \frac{m E_c}{2} \cos((\omega_c + \omega_i)t) $$
+- Power Equation:
+- 
+$$ P_t = P_c \frac{m^2}{4} $$
 - Performance: Most power-efficient variant.
 - Bandwidth Efficiency: Uses half the bandwidth of DSB-SC.
 - Power Efficiency: Highest among all AM variants as both one sideband and the carrier are suppressed.
 
 ### Double Sideband Full Carrier (DSB-FC)
 - Equation:
- $$ e_{DSB-FC} = E_c \cos(\omega_c t) + \frac{m E_c}{2} \cos((\omega_c - \omega_i)t) - \frac{m E_c}{2} \cos((\omega_c + \omega_i)t) $$
+- 
+$$ e_{DSB-FC} = E_c \cos(\omega_c t) + \frac{m E_c}{2} \cos((\omega_c - \omega_i)t) - \frac{m E_c}{2} \cos((\omega_c + \omega_i)t) $$
+- Power Equation:
+- 
+$$ P_t = P_c \left( 1 + \frac{m^2}{2} \right) $$
 - Performance: Standard AM, simple to implement but less power-efficient.
 - Bandwidth Efficiency: Uses twice the bandwidth of the modulating signal.
 - Power Efficiency: Least efficient as power is wasted on the carrier and both sidebands.
