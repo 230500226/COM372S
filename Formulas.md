@@ -118,3 +118,78 @@ $$ m = \frac{B - A}{B + A} $$
 - $B$: Maximum peak-to-peak value
 
 This formula calculates the modulation index using the minimum and maximum peak-to-peak values of the modulated signal.
+
+## 5. AM (Amplitude Modulation) Formula
+
+### Formula 5.1: Instantaneous Value of the AM Wave
+$$ e_c = E_c \sin(\omega_c t) = E_c (1 + m \sin(\omega_i t)) \sin(\omega_c t) $$
+
+#### Explanation:
+- $e_c$: Instantaneous value of the carrier signal
+- $E_c$: Maximum peak value of the carrier signal when unmodulated
+- $\omega_c$: Angular frequency of the carrier signal
+- $t$: Time
+- $m$: Modulation index or modulation factor
+- $\omega_i$: Angular frequency of the modulating signal
+
+This formula represents the amplitude modulation (AM) of a carrier signal. The term $E_c \sin(\omega_c t)$ represents the unmodulated carrier signal, while $E_c (1 + m \sin(\omega_i t)) \sin(\omega_c t)$ represents the modulated carrier signal where the amplitude varies according to the modulating signal.
+
+### Formula 5.2: Trigonometric Identity
+$$ \sin(A) \sin(B) = \frac{1}{2} [\cos(A - B) - \cos(A + B)] $$
+
+#### Explanation:
+This trigonometric identity is used to simplify the product of two sine functions into a sum of cosine functions.
+
+### Formula 5.3: AM Wave with Sidebands
+Using the trigonometric identity in the AM formula:
+
+$$ e = E_c \sin(\omega_c t) + \frac{m E_c}{2} \cos((\omega_c - \omega_i)t) - \frac{m E_c}{2} \cos((\omega_c + \omega_i)t) $$
+
+#### Explanation:
+- $e$: Instantaneous value of the AM wave
+- $E_c$: Maximum peak value of the carrier signal when unmodulated
+- $\omega_c$: Angular frequency of the carrier signal
+- $m$: Modulation index or modulation factor
+- $\omega_i$: Angular frequency of the modulating signal
+
+This formula represents the AM wave as a combination of the carrier signal, the upper sideband (frequency $f_c + f_i$), and the lower sideband (frequency $f_c - f_i$). The first term $E_c \sin(\omega_c t)$ is the carrier signal, the second term $\frac{m E_c}{2} \cos((\omega_c - \omega_i)t)$ is the upper sideband, and the last term $-\frac{m E_c}{2} \cos((\omega_c + \omega_i)t)$ is the lower sideband.
+
+### Formula 5.4: Side Frequency Amplitude
+$$ E_{sf} = \frac{m E_c}{2} $$
+
+#### Explanation:
+- $E_{sf}$: Amplitude of the side frequency
+- $m$: Modulation index or modulation factor
+- $E_c$: Maximum peak value of the carrier signal when unmodulated
+
+This formula calculates the amplitude of the side frequencies in an amplitude modulated wave.
+
+## 6. Variants of AM (Amplitude Modulation)
+
+### Double Sideband Suppressed Carrier (DSB-SC)
+- Equation:
+ $$ e_{DSB-SC} = E_m \cos(\omega_i t) \cos(\omega_c t) $$
+- Performance: Efficient in terms of power, as the carrier is suppressed.
+- Bandwidth Efficiency: Uses twice the bandwidth of the modulating signal.
+- Power Efficiency: Higher than standard AM as no power is wasted on the carrier.
+
+### Single Sideband Full Carrier (SSB-FC)
+- Equation:
+ $$ e_{SSB-FC} = E_c \cos(\omega_c t) + \frac{m E_c}{2} \cos((\omega_c + \omega_i)t) $$
+- Performance: More efficient than DSB-SC but retains the carrier.
+- Bandwidth Efficiency: Uses half the bandwidth of DSB-SC.
+- Power Efficiency: Better than DSB-SC and standard AM as it eliminates one sideband.
+
+### Single Sideband Suppressed Carrier (SSB-SC)
+- Equation:
+ $$ e_{SSB-SC} = \frac{m E_c}{2} \cos((\omega_c + \omega_i)t) $$
+- Performance: Most power-efficient variant.
+- Bandwidth Efficiency: Uses half the bandwidth of DSB-SC.
+- Power Efficiency: Highest among all AM variants as both one sideband and the carrier are suppressed.
+
+### Double Sideband Full Carrier (DSB-FC)
+- Equation:
+ $$ e_{DSB-FC} = E_c \cos(\omega_c t) + \frac{m E_c}{2} \cos((\omega_c - \omega_i)t) - \frac{m E_c}{2} \cos((\omega_c + \omega_i)t) $$
+- Performance: Standard AM, simple to implement but less power-efficient.
+- Bandwidth Efficiency: Uses twice the bandwidth of the modulating signal.
+- Power Efficiency: Least efficient as power is wasted on the carrier and both sidebands.
