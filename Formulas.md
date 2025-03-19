@@ -209,3 +209,110 @@ $$ P_t = P_c \left( 1 + \frac{m^2}{2} \right) $$
 - Performance: Standard AM, simple to implement but less power-efficient.
 - Bandwidth Efficiency: Uses twice the bandwidth of the modulating signal.
 - Power Efficiency: Least efficient as power is wasted on the carrier and both sidebands.
+
+## 7. Q Factor
+
+### Formula 7.1: Q Factor for Inductor
+$$ Q_L = \frac{X_L}{R} $$
+
+#### Explanation:
+- $Q_L$: Quality factor for the inductor
+- $X_L$: Inductive reactance
+- $R$: Resistance
+
+This formula calculates the quality factor for an inductor, which represents the ratio of inductive reactance to resistance.
+
+### Formula 7.2: Q Factor for Capacitor
+$$ Q_C = \frac{X_C}{R} $$
+
+#### Explanation:
+- $Q_C$: Quality factor for the capacitor
+- $X_C$: Capacitive reactance
+- $R$: Resistance
+
+This formula calculates the quality factor for a capacitor, which represents the ratio of capacitive reactance to resistance.
+
+### Formula 7.3: Resonance Frequency
+$$ f_r = \frac{1}{2 \pi \sqrt{LC}} $$
+
+#### Explanation:
+- $f_r$: Resonance frequency
+- $L$: Inductance
+- $C$: Capacitance
+
+This formula calculates the resonance frequency of an LC circuit, which is the frequency at which the circuit naturally oscillates.
+
+### Formula 7.4: Inductive Reactance
+$$ X_L = 2 \pi f L $$
+
+#### Explanation:
+- $X_L$: Inductive reactance
+- $f$: Frequency
+- $L$: Inductance
+
+This formula calculates the inductive reactance, which is the opposition to the change in current by an inductor.
+
+### Formula 7.5: Capacitive Reactance
+$$ X_C = \frac{1}{2 \pi f C} $$
+
+#### Explanation:
+- $X_C$: Capacitive reactance
+- $f$: Frequency
+- $C$: Capacitance
+
+This formula calculates the capacitive reactance, which is the opposition to the change in voltage by a capacitor.
+
+### Formula 7.6: Impedance
+$$ Z = \sqrt{R^2 + (X_L - X_C)^2} $$
+
+#### Explanation:
+- $Z$: Impedance
+- $R$: Resistance
+- $X_L$: Inductive reactance
+- $X_C$: Capacitive reactance
+
+This formula calculates the impedance of an RLC circuit, which is the total opposition to the current flow.
+
+### Formula 7.7: Voltage at Resonance Frequency
+$$ e_{out} = e_{in} \left( \frac{R_2}{R_1 + R_2} \right) $$
+
+#### Explanation:
+- $e_{out}$: Output voltage at resonance frequency
+- $e_{in}$: Input voltage
+- $R_1$: Resistance 1
+- $R_2$: Resistance 2
+
+This formula represents the relationship between the output voltage and input voltage at the resonance frequency in a voltage divider configuration.
+
+## 8. Band Pass Filter
+
+### Formula 8.1: Bandwidth (BW)
+$$ BW = \frac{R}{2 \pi L} $$
+
+#### Explanation:
+- $BW$: Bandwidth
+- $R$: Resistance
+- $L$: Inductance
+
+This formula calculates the bandwidth of a band pass filter, which is the range of frequencies that the filter allows to pass through.
+
+### Formula 8.2: Q Factor from Resonance Frequency and Bandwidth
+$$ Q = \frac{f_r}{BW} $$
+
+#### Explanation:
+- $Q$: Quality factor
+- $f_r$: Resonance frequency
+- $BW$: Bandwidth
+
+This formula calculates the quality factor of a band pass filter, which is the ratio of the resonance frequency to the bandwidth.
+
+### Formula 8.3: Q Factor from Inductive Reactance and Resistance
+$$ Q = \frac{\omega L}{R} $$
+
+#### Explanation:
+- $Q$: Quality factor
+- $\omega$: Angular frequency
+- $L$: Inductance
+- $R$: Resistance
+
+This formula calculates the quality factor of a band pass filter based on the inductive reactance and resistance.
