@@ -51,3 +51,49 @@ $$ A_{dbm} = 10 \log_{10} \left( \frac{P}{1mW} \right) $$
 - $P$: Power
 
 This formula calculates the gain with the reference input power of 1 milliwatt.
+
+## 3. Decibel as a Voltage
+
+### Formula 3.1: Decibel Formula
+$$ dB = 10 \log_{10} \left( \frac{P_2}{P_1} \right) $$
+
+#### Explanation:
+- $dB$: Decibels
+- $P_2$: Output power
+- $P_1$: Input power
+
+This is the standard decibel formula used to express the ratio of two power levels.
+
+### Derivation of Decibel as a Voltage
+
+Given:
+
+$$ P = \frac{V^2}{R} $$
+
+Substitute for $P_2$ and $P_1$:
+
+$$ dB = 10 \log_{10} \left( \frac{\frac{V_2^2}{R}}{\frac{V_1^2}{R}} \right) $$
+
+Simplify the equation:
+
+$$ dB = 10 \log_{10} \left( \frac{V_2^2}{V_1^2} \right) $$
+
+Since $\log_{10} (x^2) = 2 \log_{10} (x)$:
+
+$$ dB = 10 \cdot 2 \log_{10} \left( \frac{V_2}{V_1} \right) $$
+
+Therefore:
+
+$$ dB = 20 \log_{10} \left( \frac{V_2}{V_1} \right) $$
+
+### Formula 3.2: Decibel as a Voltage
+
+$$ dB = 20 \log_{10} \left( \frac{V_2}{V_1} \right) $$
+
+#### Explanation:
+- $dB$: Decibels
+- $V_2$: Output voltage
+- $V_1$: Input voltage
+
+This formula expresses the ratio of two voltage levels in decibels.
+
