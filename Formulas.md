@@ -96,3 +96,25 @@ $$ dB = 20 \log_{10} \left( \frac{V_2 \sqrt{R_1}}{V_1 \sqrt{R_2}} \right) $$
 - $R_2$: Output resistance
 
 This formula expresses the ratio of two voltage levels in decibels, taking into account the input and output resistances.
+
+## 4. Modulation Index
+
+### Formula 4.1: Modulation Index
+$$ m = \frac{E_i}{E_c} $$
+
+#### Explanation:
+- $m$: Modulation index or modulation factor (ranges from 0 to 1 or can be expressed as a percentage)
+- $E_i$: Amplitude of the modulating signal
+- $E_c$: Amplitude of the carrier signal
+
+This formula calculates the modulation index, which represents the ratio of the amplitude of the modulating signal to the amplitude of the carrier signal.
+
+### Formula 4.2: Modulation Index from Peak-to-Peak Values
+$$ m = \frac{B - A}{B + A} $$
+
+#### Explanation:
+- $m$: Modulation index or modulation factor
+- $A$: Minimum peak-to-peak value
+- $B$: Maximum peak-to-peak value
+
+This formula calculates the modulation index using the minimum and maximum peak-to-peak values of the modulated signal.
