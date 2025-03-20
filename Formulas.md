@@ -97,9 +97,70 @@ $$ dB = 20 \log_{10} \left( \frac{V_2 \sqrt{R_1}}{V_1 \sqrt{R_2}} \right) $$
 
 This formula expresses the ratio of two voltage levels in decibels, taking into account the input and output resistances.
 
-## 4. Modulation Index
+## 4. Decibel as a Current
 
-### Formula 4.1: Modulation Index
+### Formula 4.1: Gain in Decibels (Current)
+$$ A_{db} = 20 \log_{10} \left( \frac{I_2}{I_1} \right) $$
+
+#### Explanation:
+- $A_{db}$: Gain in decibels (dB)
+- $I_2$: Output current
+- $I_1$: Input current
+
+This formula calculates the gain in terms of current, where the gain is the ratio of the output current to the input current, expressed in decibels.
+
+### Derivation of Gain in Decibels (Current)
+
+Given the power formula:
+
+$$ P = I^2 R $$
+
+Substitute for $P_2$ and $P_1$ in the power gain formula:
+
+$$ A_{db} = 10 \log_{10} \left( \frac{P_2}{P_1} \right) $$
+$$ A_{db} = 10 \log_{10} \left( \frac{I_2^2 R_2}{I_1^2 R_1} \right) $$
+
+Simplify the equation:
+
+$$ A_{db} = 10 \log_{10} \left( \frac{I_2^2}{I_1^2} \cdot \frac{R_2}{R_1} \right) $$
+
+Separate into two logarithms:
+
+$$ A_{db} = 10 \log_{10} \left( \frac{I_2^2}{I_1^2} \right) + 10 \log_{10} \left( \frac{R_2}{R_1} \right) $$
+
+Since $\log_{10} (x^2) = 2 \log_{10} (x)$:
+
+$$ A_{db} = 20 \log_{10} \left( \frac{I_2}{I_1} \right) + 10 \log_{10} \left( \frac{R_2}{R_1} \right) $$
+
+### Special Case: When Resistances Are Not Equal
+
+If the resistances are not equal ($R_2 \neq R_1$), the gain formula will include an additional term to account for the difference in resistances:
+
+$$ A_{db} = 20 \log_{10} \left( \frac{I_2}{I_1} \right) + 10 \log_{10} \left( \frac{R_2}{R_1} \right) $$
+
+#### Explanation:
+- The first term $20 \log_{10} \left( \frac{I_2}{I_1} \right)$ represents the gain due to the current ratio.
+- The second term $10 \log_{10} \left( \frac{R_2}{R_1} \right)$ adjusts the gain to account for the difference in resistances.
+
+### Combined Expression
+
+We can combine the logarithmic terms into a single log expression by using the property of logarithms:
+
+$$ 10 \log_{10} \left( \frac{R_2}{R_1} \right) = 20 \log_{10} \left( \frac{\sqrt{R_2}}{\sqrt{R_1}} \right) $$
+
+Thus, the formula becomes:
+
+$$ A_{db} = 20 \log_{10} \left( \frac{I_2}{I_1} \right) + 20 \log_{10} \left( \frac{\sqrt{R_2}}{\sqrt{R_1}} \right) $$
+
+Combining the terms:
+
+$$ A_{db} = 20 \log_{10} \left( \frac{I_2 \sqrt{R_2}}{I_1 \sqrt{R_1}} \right) $$
+
+This shows that the total gain in decibels can be expressed as a single logarithmic term that accounts for both the current ratio and the resistance ratio.
+
+## 5. Modulation Index
+
+### Formula 5.1: Modulation Index
 $$ m = \frac{E_i}{E_c} $$
 
 #### Explanation:
@@ -109,7 +170,7 @@ $$ m = \frac{E_i}{E_c} $$
 
 This formula calculates the modulation index, which represents the ratio of the amplitude of the modulating signal to the amplitude of the carrier signal.
 
-### Formula 4.2: Modulation Index from Peak-to-Peak Values
+### Formula 5.2: Modulation Index from Peak-to-Peak Values
 $$ m = \frac{B - A}{B + A} $$
 
 #### Explanation:
@@ -119,9 +180,9 @@ $$ m = \frac{B - A}{B + A} $$
 
 This formula calculates the modulation index using the minimum and maximum peak-to-peak values of the modulated signal.
 
-## 5. AM (Amplitude Modulation) Formula
+## 6. AM (Amplitude Modulation) Formula
 
-### Formula 5.1: Instantaneous Value of the AM Wave
+### Formula 6.1: Instantaneous Value of the AM Wave
 $$ e_c = E_c \sin(\omega_c t) = E_c (1 + m \sin(\omega_i t)) \sin(\omega_c t) $$
 
 #### Explanation:
@@ -132,15 +193,15 @@ $$ e_c = E_c \sin(\omega_c t) = E_c (1 + m \sin(\omega_i t)) \sin(\omega_c t) $$
 - $m$: Modulation index or modulation factor
 - $\omega_i$: Angular frequency of the modulating signal
 
-This formula represents the amplitude modulation (AM) of a carrier signal. The term $E_c \sin(\omega_c t)$ represents the unmodulated carrier signal, while $E_c (1 + m \sin(\omega_i t)) \sin(\omega_c t)$ represents the modulated carrier signal where the amplitude varies according to the modulating signal.
+This formula represents the amplitude modulation (AM) of a carrier signal. The term $E_c \sin(\omega_c t)$ represents the unmodulated carrier signal, while $E_c (1 + m \sin(\omega_i t)) \sin(\omega_c t)$ represents the modulated carrier signal.
 
-### Formula 5.2: Trigonometric Identity
+### Formula 6.2: Trigonometric Identity
 $$ \sin(A) \sin(B) = \frac{1}{2} [\cos(A - B) - \cos(A + B)] $$
 
 #### Explanation:
 This trigonometric identity is used to simplify the product of two sine functions into a sum of cosine functions.
 
-### Formula 5.3: AM Wave with Sidebands
+### Formula 6.3: AM Wave with Sidebands
 Using the trigonometric identity in the AM formula:
 
 $$ e = E_c \sin(\omega_c t) + \frac{m E_c}{2} \cos((\omega_c - \omega_i)t) - \frac{m E_c}{2} \cos((\omega_c + \omega_i)t) $$
@@ -152,9 +213,9 @@ $$ e = E_c \sin(\omega_c t) + \frac{m E_c}{2} \cos((\omega_c - \omega_i)t) - \fr
 - $m$: Modulation index or modulation factor
 - $\omega_i$: Angular frequency of the modulating signal
 
-This formula represents the AM wave as a combination of the carrier signal, the upper sideband (frequency $f_c + f_i$), and the lower sideband (frequency $f_c - f_i$). The first term $E_c \sin(\omega_c t)$ is the carrier signal, the second term $\frac{m E_c}{2} \cos((\omega_c - \omega_i)t)$ is the upper sideband, and the last term $-\\frac{m E_c}{2} \cos((\omega_c + \omega_i)t)$ is the lower sideband.
+This formula represents the AM wave as a combination of the carrier signal, the upper sideband (frequency $f_c + f_i$), and the lower sideband (frequency $f_c - f_i$). The first term $E_c \sin(\omega_c t)$ represents the carrier signal, while the second and third terms represent the sidebands.
 
-### Formula 5.4: Side Frequency Amplitude
+### Formula 6.4: Side Frequency Amplitude
 $$ E_{sf} = \frac{m E_c}{2} $$
 
 #### Explanation:
@@ -164,7 +225,7 @@ $$ E_{sf} = \frac{m E_c}{2} $$
 
 This formula calculates the amplitude of the side frequencies in an amplitude modulated wave.
 
-## 6. Variants of AM (Amplitude Modulation)
+## 7. Variants of AM (Amplitude Modulation)
 
 ### Double Sideband Suppressed Carrier (DSB-SC)
 - Equation:
@@ -210,9 +271,9 @@ $$ P_t = P_c \left( 1 + \frac{m^2}{2} \right) $$
 - Bandwidth Efficiency: Uses twice the bandwidth of the modulating signal.
 - Power Efficiency: Least efficient as power is wasted on the carrier and both sidebands.
 
-## 7. Q Factor
+## 8. Q Factor
 
-### Formula 7.1: Q Factor for Inductor
+### Formula 8.1: Q Factor for Inductor
 $$ Q_L = \frac{X_L}{R} $$
 
 #### Explanation:
@@ -222,7 +283,7 @@ $$ Q_L = \frac{X_L}{R} $$
 
 This formula calculates the quality factor for an inductor, which represents the ratio of inductive reactance to resistance.
 
-### Formula 7.2: Q Factor for Capacitor
+### Formula 8.2: Q Factor for Capacitor
 $$ Q_C = \frac{X_C}{R} $$
 
 #### Explanation:
@@ -232,7 +293,7 @@ $$ Q_C = \frac{X_C}{R} $$
 
 This formula calculates the quality factor for a capacitor, which represents the ratio of capacitive reactance to resistance.
 
-### Formula 7.3: Resonance Frequency
+### Formula 8.3: Resonance Frequency
 $$ f_r = \frac{1}{2 \pi \sqrt{LC}} $$
 
 #### Explanation:
@@ -242,7 +303,7 @@ $$ f_r = \frac{1}{2 \pi \sqrt{LC}} $$
 
 This formula calculates the resonance frequency of an LC circuit, which is the frequency at which the circuit naturally oscillates.
 
-### Formula 7.4: Inductive Reactance
+### Formula 8.4: Inductive Reactance
 $$ X_L = 2 \pi f L $$
 
 #### Explanation:
@@ -252,7 +313,7 @@ $$ X_L = 2 \pi f L $$
 
 This formula calculates the inductive reactance, which is the opposition to the change in current by an inductor.
 
-### Formula 7.5: Capacitive Reactance
+### Formula 8.5: Capacitive Reactance
 $$ X_C = \frac{1}{2 \pi f C} $$
 
 #### Explanation:
@@ -262,7 +323,7 @@ $$ X_C = \frac{1}{2 \pi f C} $$
 
 This formula calculates the capacitive reactance, which is the opposition to the change in voltage by a capacitor.
 
-### Formula 7.6: Impedance
+### Formula 8.6: Impedance
 $$ Z = \sqrt{R^2 + (X_L - X_C)^2} $$
 
 #### Explanation:
@@ -273,7 +334,7 @@ $$ Z = \sqrt{R^2 + (X_L - X_C)^2} $$
 
 This formula calculates the impedance of an RLC circuit, which is the total opposition to the current flow.
 
-### Formula 7.7: Voltage at Resonance Frequency
+### Formula 8.7: Voltage at Resonance Frequency
 $$ e_{out} = e_{in} \left( \frac{R_2}{R_1 + R_2} \right) $$
 
 #### Explanation:
@@ -284,9 +345,9 @@ $$ e_{out} = e_{in} \left( \frac{R_2}{R_1 + R_2} \right) $$
 
 This formula represents the relationship between the output voltage and input voltage at the resonance frequency in a voltage divider configuration.
 
-## 8. Band Pass Filter
+## 9. Band Pass Filter
 
-### Formula 8.1: Bandwidth (BW)
+### Formula 9.1: Bandwidth (BW)
 $$ BW = \frac{R}{2 \pi L} $$
 
 #### Explanation:
@@ -296,7 +357,7 @@ $$ BW = \frac{R}{2 \pi L} $$
 
 This formula calculates the bandwidth of a band pass filter, which is the range of frequencies that the filter allows to pass through.
 
-### Formula 8.2: Q Factor from Resonance Frequency and Bandwidth
+### Formula 9.2: Q Factor from Resonance Frequency and Bandwidth
 $$ Q = \frac{f_r}{BW} $$
 
 #### Explanation:
@@ -306,13 +367,10 @@ $$ Q = \frac{f_r}{BW} $$
 
 This formula calculates the quality factor of a band pass filter, which is the ratio of the resonance frequency to the bandwidth.
 
-### Formula 8.3: Q Factor from Inductive Reactance and Resistance
+### Formula 9.3: Q Factor from Inductive Reactance and Resistance
 $$ Q = \frac{\omega L}{R} $$
 
 #### Explanation:
 - $Q$: Quality factor
 - $\omega$: Angular frequency
-- $L$: Inductance
-- $R$: Resistance
-
-This formula calculates the quality factor of a band pass filter based on the inductive reactance and resistance.
+- $L$: Induct
