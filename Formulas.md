@@ -225,7 +225,19 @@ $$ E_{sf} = \frac{m E_c}{2} $$
 
 This formula calculates the amplitude of the side frequencies in an amplitude modulated wave.
 
-## 7. Variants of AM (Amplitude Modulation)
+## 7. Total Current in AM
+
+### Formula 7.1: Total Current in AM
+$$ I_t = I_c \sqrt{1 + \frac{m^2}{2}} $$
+
+#### Explanation:
+- $I_t$: Total current in AM
+- $I_c$: Carrier current
+- $m$: Modulation index
+
+This formula calculates the total current \( I_t \) in an amplitude modulated (AM) signal. The total current is derived from the carrier current \( I_c \) and the modulation index \( m \). The formula accounts for the increase in current due to modulation by taking the square root of the sum of 1 and half the square of the modulation index.
+
+## 8. Variants of AM (Amplitude Modulation)
 
 ### Double Sideband Suppressed Carrier (DSB-SC)
 - Equation:
@@ -271,9 +283,9 @@ $$ P_t = P_c \left( 1 + \frac{m^2}{2} \right) $$
 - Bandwidth Efficiency: Uses twice the bandwidth of the modulating signal.
 - Power Efficiency: Least efficient as power is wasted on the carrier and both sidebands.
 
-## 8. Q Factor
+## 9. Q Factor
 
-### Formula 8.1: Q Factor for Inductor
+### Formula 9.1: Q Factor for Inductor
 $$ Q_L = \frac{X_L}{R} $$
 
 #### Explanation:
@@ -283,7 +295,7 @@ $$ Q_L = \frac{X_L}{R} $$
 
 This formula calculates the quality factor for an inductor, which represents the ratio of inductive reactance to resistance.
 
-### Formula 8.2: Q Factor for Capacitor
+### Formula 9.2: Q Factor for Capacitor
 $$ Q_C = \frac{X_C}{R} $$
 
 #### Explanation:
@@ -293,7 +305,7 @@ $$ Q_C = \frac{X_C}{R} $$
 
 This formula calculates the quality factor for a capacitor, which represents the ratio of capacitive reactance to resistance.
 
-### Formula 8.3: Resonance Frequency
+### Formula 9.3: Resonance Frequency
 $$ f_r = \frac{1}{2 \pi \sqrt{LC}} $$
 
 #### Explanation:
@@ -303,7 +315,7 @@ $$ f_r = \frac{1}{2 \pi \sqrt{LC}} $$
 
 This formula calculates the resonance frequency of an LC circuit, which is the frequency at which the circuit naturally oscillates.
 
-### Formula 8.4: Inductive Reactance
+### Formula 9.4: Inductive Reactance
 $$ X_L = 2 \pi f L $$
 
 #### Explanation:
@@ -313,7 +325,7 @@ $$ X_L = 2 \pi f L $$
 
 This formula calculates the inductive reactance, which is the opposition to the change in current by an inductor.
 
-### Formula 8.5: Capacitive Reactance
+### Formula 9.5: Capacitive Reactance
 $$ X_C = \frac{1}{2 \pi f C} $$
 
 #### Explanation:
@@ -323,7 +335,7 @@ $$ X_C = \frac{1}{2 \pi f C} $$
 
 This formula calculates the capacitive reactance, which is the opposition to the change in voltage by a capacitor.
 
-### Formula 8.6: Impedance
+### Formula 9.6: Impedance
 $$ Z = \sqrt{R^2 + (X_L - X_C)^2} $$
 
 #### Explanation:
@@ -334,7 +346,7 @@ $$ Z = \sqrt{R^2 + (X_L - X_C)^2} $$
 
 This formula calculates the impedance of an RLC circuit, which is the total opposition to the current flow.
 
-### Formula 8.7: Voltage at Resonance Frequency
+### Formula 9.7: Voltage at Resonance Frequency
 $$ e_{out} = e_{in} \left( \frac{R_2}{R_1 + R_2} \right) $$
 
 #### Explanation:
@@ -345,9 +357,9 @@ $$ e_{out} = e_{in} \left( \frac{R_2}{R_1 + R_2} \right) $$
 
 This formula represents the relationship between the output voltage and input voltage at the resonance frequency in a voltage divider configuration.
 
-## 9. Band Pass Filter
+## 10. Band Pass Filter
 
-### Formula 9.1: Bandwidth (BW)
+### Formula 10.1: Bandwidth (BW)
 $$ BW = \frac{R}{2 \pi L} $$
 
 #### Explanation:
@@ -357,20 +369,5 @@ $$ BW = \frac{R}{2 \pi L} $$
 
 This formula calculates the bandwidth of a band pass filter, which is the range of frequencies that the filter allows to pass through.
 
-### Formula 9.2: Q Factor from Resonance Frequency and Bandwidth
+### Formula 10.2: Q Factor from Resonance Frequency and Bandwidth
 $$ Q = \frac{f_r}{BW} $$
-
-#### Explanation:
-- $Q$: Quality factor
-- $f_r$: Resonance frequency
-- $BW$: Bandwidth
-
-This formula calculates the quality factor of a band pass filter, which is the ratio of the resonance frequency to the bandwidth.
-
-### Formula 9.3: Q Factor from Inductive Reactance and Resistance
-$$ Q = \frac{\omega L}{R} $$
-
-#### Explanation:
-- $Q$: Quality factor
-- $\omega$: Angular frequency
-- $L$: Induct
