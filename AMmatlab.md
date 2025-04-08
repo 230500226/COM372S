@@ -73,4 +73,5 @@ This document provides a step-by-step guide to perform AM modulation and analyze
     ```
 
 The output:
-![Msg_sig](https://cdn.discordapp.com/attachments/1241017413210738801/1356951311924592750/image.png?ex=67ee6ee3&is=67ed1d63&hm=92be44b3212aac2b8a4321af04f6dabfe9db8e91c5836efc10f12584102094d9&)
+
+![The MsgSig](https://github.com/230500226/COM372S/blob/main/msgSig.png?raw=true)
