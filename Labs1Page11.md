@@ -1,6 +1,6 @@
 # Labs 1 Page 11
 
-## Q0.1.1
+## Q0.1
 - Critical Aspect and Reasoning 1
 - Bandwidth Determination
 
@@ -76,30 +76,9 @@ $$
 \beta_{\text{SSB}} = 50 \text{ Hz}
 $$
 
-## Q0.1.1
+## Q0.2
 - Critical Reasoning:
 - Opinion on Power and Bandwidth Content
-
-### MATLAB code
-```matlab
-
-% Opinion on Power and Bandwidth Content
-opinion = """
-The modulation process has a significant impact on both power and bandwidth content associated with the message signal.
-
-For Double Sideband (DSB) modulation:
-- The bandwidth of the DSB modulated signal is twice the bandwidth of the original message signal. This is because DSB modulation transmits both the upper and lower sidebands.
-- The power consumption is higher in DSB modulation because both sidebands are transmitted, which requires more power.
-
-For Single Sideband (SSB) modulation:
-- The bandwidth of the SSB modulated signal is equal to the bandwidth of the original message signal. This is because SSB modulation transmits only one sideband (either upper or lower), effectively halving the bandwidth compared to DSB.
-- The power consumption is lower in SSB modulation because only one sideband is transmitted, which requires less power.
-
-In summary, SSB modulation is more efficient in terms of both power and bandwidth compared to DSB modulation. It reduces the required bandwidth by half and consumes less power by transmitting only one sideband.
-""";
-
-disp(opinion);
-```
 
 The modulation process has a significant impact on both power and bandwidth content associated with the message signal.
 
