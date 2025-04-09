@@ -44,6 +44,10 @@ plot(t, ssb_modulated_signal);
 title('SSB Modulated Signal');
 ```
 
+The Output plots:
+
+![Output plots](https://github.com/230500226/COM372S/blob/main/BandwidthDetermination.jpg?raw=true)
+
 From the signals presented in Figure 5 and Figure 6, we can determine the bandwidths as follows:
 
 ### Message Signal Bandwidth
