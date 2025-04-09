@@ -48,9 +48,9 @@ The Output plots:
 
 ![Output plots](https://github.com/230500226/COM372S/blob/main/BandwidthDetermination.jpg?raw=true)
 
-From the signals presented in Figure 5 and Figure 6, we can determine the bandwidths as follows:
-
 ### Message Signal Bandwidth
+
+Using Figure 5 & 6
 
 Formula: 
 
@@ -74,7 +74,7 @@ $$
 
 ### Single Sideband (SSB) Modulated Signal Bandwidth
 
-Calculation: SSB modulation transmits only one sideband, so the bandwidth is: 
+Calculation: SSB modulation transmits only one sideband, therefore the bandwidth is: 
 
 $$
 \beta_{\text{SSB}} = 50 \text{ Hz}
