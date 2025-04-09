@@ -54,7 +54,7 @@ This document provides a step-by-step guide to perform AM modulation and analyze
 5. Plot the message signal on the Spectrum Analyzer:
 
     ```
-    Spectrum_Analyzer(Msg_sig);
+    Spectrum_Analyzer(AM_sing);
     Error using dsp.webscopes.internal.BaseWebScope/validateInputs
     Too many input channels. The maximum number of channels allowed is
     100.
@@ -69,9 +69,9 @@ This document provides a step-by-step guide to perform AM modulation and analyze
 6. Transpose the message signal to correct the input dimensions and plot again:
 
     ```matlab
-    Spectrum_Analyzer(Msg_sig');
+    Spectrum_Analyzer(AM_sing');
     ```
 
 The output:
 
-![The MsgSig](https://github.com/230500226/COM372S/blob/main/msgSig.png?raw=true)
+![The AM ssb](https://github.com/230500226/COM372S/blob/main/AmSing.png?raw=true)
