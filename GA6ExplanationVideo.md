@@ -13,7 +13,7 @@ This assessment is designed to stimulate research, further readings, and applica
 ## Part A: Broadcasting Station Setup
 
 ### 1. TV Broadcasting Technology
-- Identify **two suitable technologies** for TV broadcasting.
+- Identify **three suitable technologies** for TV broadcasting.
 - Justify which is most suitable for **nationwide broadcast** and revenue maximization.
 - **Word Limit**: 250 words.
 
